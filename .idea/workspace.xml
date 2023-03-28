@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4855b9cf-de7b-4935-afdd-84f5510e4ab6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cursojava/classes/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cursojava/classes/Aluno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cursojava/executavel/PrimeiraClasseJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cursojava/executavel/PrimeiraClasseJava.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +63,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "google-java-format.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,11 +100,15 @@
       <option name="presentableId" value="Default" />
       <updated>1679661757513</updated>
       <workItem from="1680007546896" duration="719000" />
-      <workItem from="1680008632680" duration="8289000" />
+      <workItem from="1680008632680" duration="11038000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -136,11 +136,7 @@ public void setNumeroMatricula(String numeroMatricula) {
 
   public boolean getAlunoAprovado() {
     double media = this.getMediaNota();
-    if (media >= 70) {
-      return true;
-    } else {
-      return false;
-    }
+    return media >= 70;
   }
 
   public String getStatusAluno() {
