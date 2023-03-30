@@ -1,26 +1,19 @@
 package cursojava.classes;
 
-import cursojava.constantes.StatusAluno;import java.util.ArrayList;
+import cursojava.constantes.StatusAluno;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Aluno {
+public class Aluno extends Pessoa {
 
-  String nome;
-  int idade;
-  String dataNascimento;
-  String registroGeral;
-  String numeroCpf;
+  String nomeEscola;
   String dataMatricula;
   String numeroMatricula;
-  String nomeEscola;
   String serieMatriculado;
-
-  public Aluno() {
-
-  }
-
   private List<Disciplina> disciplinas = new ArrayList<>();
+
+  public Aluno() {}
 
   public List<Disciplina> getDisciplinas() {
     return disciplinas;
@@ -37,6 +30,11 @@ public class Aluno {
   public Aluno(String nomePadrao, int idadePadrao) {
     nome = nomePadrao;
     idade = idadePadrao;
+  }
+
+  @Override
+  public boolean isActive() {
+    return false;
   }
 
   public String getNome() {
@@ -106,21 +104,38 @@ public class Aluno {
   public String getNumeroMatricula() {
     return numeroMatricula;
   }
-public void setNumeroMatricula(String numeroMatricula) {
-            this.numeroMatricula = numeroMatricula;
-    }
-@Override
+
+  public void setNumeroMatricula(String numeroMatricula) {
+    this.numeroMatricula = numeroMatricula;
+  }
+
+  @Override
   public String toString() {
-    return "Aluno{" +
-        "nome='" + nome + '\'' +
-        ", idade=" + idade +
-        ", dataNascimento='" + dataNascimento + '\'' +
-        ", registroGeral='" + registroGeral + '\'' +
-        ", numeroCpf='" + numeroCpf + '\'' +
-        ", dataMatricula='" + dataMatricula + '\'' +
-        ", nomeEscola='" + nomeEscola + '\'' +
-        ", serieMatriculado='" + serieMatriculado + '\'' +
-        '}';
+    return "Aluno{"
+        + "nome='"
+        + nome
+        + '\''
+        + ", idade="
+        + idade
+        + ", dataNascimento='"
+        + dataNascimento
+        + '\''
+        + ", registroGeral='"
+        + registroGeral
+        + '\''
+        + ", numeroCpf='"
+        + numeroCpf
+        + '\''
+        + ", dataMatricula='"
+        + dataMatricula
+        + '\''
+        + ", nomeEscola='"
+        + nomeEscola
+        + '\''
+        + ", serieMatriculado='"
+        + serieMatriculado
+        + '\''
+        + '}';
   }
 
   public double getMediaNota() {
@@ -131,7 +146,7 @@ public void setNumeroMatricula(String numeroMatricula) {
       somaNotas += disciplina.getNota();
     }
 
-    return somaNotas/disciplinas.size();
+    return somaNotas / disciplinas.size();
   }
 
   public boolean getAlunoAprovado() {
@@ -141,11 +156,11 @@ public void setNumeroMatricula(String numeroMatricula) {
 
   public String getStatusAluno() {
     double media = this.getMediaNota();
-    if (media >=50) {
-      if (media >=70) {
-       return  StatusAluno.APROVADO;
-      }else {
-       return StatusAluno.RECUPERACAO;
+    if (media >= 50) {
+      if (media >= 70) {
+        return StatusAluno.APROVADO;
+      } else {
+        return StatusAluno.RECUPERACAO;
       }
     } else {
       return StatusAluno.REPROVADO;
@@ -160,17 +175,26 @@ public void setNumeroMatricula(String numeroMatricula) {
     if (!(o instanceof Aluno aluno)) {
       return false;
     }
-    return getIdade() == aluno.getIdade() && getNome().equals(aluno.getNome())
-        && getDataNascimento().equals(aluno.getDataNascimento()) && getRegistroGeral().equals(
-        aluno.getRegistroGeral()) && getNumeroCpf().equals(aluno.getNumeroCpf())
-        && getDataMatricula().equals(aluno.getDataMatricula()) && getNomeEscola().equals(
-        aluno.getNomeEscola()) && getSerieMatriculado().equals(aluno.getSerieMatriculado());
+    return getIdade() == aluno.getIdade()
+        && getNome().equals(aluno.getNome())
+        && getDataNascimento().equals(aluno.getDataNascimento())
+        && getRegistroGeral().equals(aluno.getRegistroGeral())
+        && getNumeroCpf().equals(aluno.getNumeroCpf())
+        && getDataMatricula().equals(aluno.getDataMatricula())
+        && getNomeEscola().equals(aluno.getNomeEscola())
+        && getSerieMatriculado().equals(aluno.getSerieMatriculado());
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(getNome(), getIdade(), getDataNascimento(), getRegistroGeral(),
-        getNumeroCpf(), getDataMatricula(), getNomeEscola(),
+    return Objects.hash(
+        getNome(),
+        getIdade(),
+        getDataNascimento(),
+        getRegistroGeral(),
+        getNumeroCpf(),
+        getDataMatricula(),
+        getNomeEscola(),
         getSerieMatriculado());
   }
 }

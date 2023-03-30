@@ -20,24 +20,24 @@ public class PrimeiraClasseJava {
 
     for (int quantidade = 1; quantidade <= 3; quantidade++) {
 
-      //Aluno
+      // Aluno
       String nome = JOptionPane.showInputDialog("Qual é o nome do aluno " + quantidade + "?");
-//    String idade = JOptionPane.showInputDialog("Qual é a idade do aluno?");
-//    String dataNascimento = JOptionPane.showInputDialog("Qual é a data de nascimento do aluno?");
-
+      //    String idade = JOptionPane.showInputDialog("Qual é a idade do aluno?");
+      //    String dataNascimento = JOptionPane.showInputDialog("Qual é a data de nascimento do
+      // aluno?");
 
       Aluno aluno1 = new Aluno();
       aluno1.setNome(nome);
-//    aluno1.setIdade(Integer.parseInt(idade));
-//    aluno1.setDataNascimento(dataNascimento);
-//    aluno1.setRegistroGeral(registroGeral);
+      //    aluno1.setIdade(Integer.parseInt(idade));
+      //    aluno1.setDataNascimento(dataNascimento);
+      //    aluno1.setRegistroGeral(registroGeral);
 
       Disciplina listDisciplina = new Disciplina();
 
       for (int pos = 1; pos <= 2; pos++) {
         String disciplina = JOptionPane.showInputDialog("Qual é a disciplina " + pos + "?");
-        String notaDisciplina = JOptionPane.showInputDialog(
-            "Qual é a nota do aluno na disciplina " + disciplina + "?");
+        String notaDisciplina =
+            JOptionPane.showInputDialog("Qual é a nota do aluno na disciplina " + disciplina + "?");
 
         listDisciplina.setDisciplina(disciplina);
         listDisciplina.setNota(Double.parseDouble(notaDisciplina));
@@ -46,14 +46,14 @@ public class PrimeiraClasseJava {
 
       int escolha = JOptionPane.showConfirmDialog(null, "Deseja remover alguma disciplina?");
 
-      if (escolha == 0) { //Opção sim = 0
+      if (escolha == 0) { // Opção sim = 0
 
         int continuarRemover = 0;
         int posicao = 1;
 
         while (continuarRemover == 0) {
-          String disciplinaRemover = JOptionPane.showInputDialog(
-              "Qual disciplina deseja remover: 1,2,3,4 ?");
+          String disciplinaRemover =
+              JOptionPane.showInputDialog("Qual disciplina deseja remover: 1,2,3,4 ?");
 
           aluno1.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue() - posicao);
           posicao++;
@@ -62,7 +62,6 @@ public class PrimeiraClasseJava {
       }
 
       alunos.add(aluno1);
-
     }
 
     situacaoAluno.put(StatusAluno.APROVADO, new ArrayList<Aluno>());
@@ -81,21 +80,35 @@ public class PrimeiraClasseJava {
 
     System.out.println("----------------- Lista dos Aprovados ------------");
     for (Aluno aluno : situacaoAluno.get(StatusAluno.APROVADO)) {
-      System.out.println("Aluno = " + aluno.getNome()
-          + " Resultado = " + aluno.getStatusAluno() + " com media de = " + aluno.getMediaNota());
+      System.out.println(
+          "Aluno = "
+              + aluno.getNome()
+              + " Resultado = "
+              + aluno.getStatusAluno()
+              + " com media de = "
+              + aluno.getMediaNota());
     }
 
     System.out.println("----------------- Lista dos alunos em Recuperacao ------------");
     for (Aluno aluno : situacaoAluno.get(StatusAluno.RECUPERACAO)) {
-      System.out.println("Aluno = " + aluno.getNome()
-          + " Resultado = " + aluno.getStatusAluno() + " com media de = " + aluno.getMediaNota());
+      System.out.println(
+          "Aluno = "
+              + aluno.getNome()
+              + " Resultado = "
+              + aluno.getStatusAluno()
+              + " com media de = "
+              + aluno.getMediaNota());
     }
 
     System.out.println("----------------- Lista dos Reprovados ------------");
     for (Aluno aluno : situacaoAluno.get(StatusAluno.REPROVADO)) {
-      System.out.println("Aluno = " + aluno.getNome()
-          + " Resultado = " + aluno.getStatusAluno() + " com media de = " + aluno.getMediaNota());
+      System.out.println(
+          "Aluno = "
+              + aluno.getNome()
+              + " Resultado = "
+              + aluno.getStatusAluno()
+              + " com media de = "
+              + aluno.getMediaNota());
     }
-
   }
 }

@@ -31,8 +31,8 @@ public class Disciplina {
     if (!(o instanceof Disciplina that)) {
       return false;
     }
-    return Double.compare(that.getNota(), getNota()) == 0 && getDisciplina().equals(
-        that.getDisciplina());
+    return Double.compare(that.getNota(), getNota()) == 0
+        && getDisciplina().equals(that.getDisciplina());
   }
 
   @Override
@@ -42,9 +42,6 @@ public class Disciplina {
 
   @Override
   public String toString() {
-    return "Disciplina{" +
-        "nota=" + nota +
-        ", disciplina='" + disciplina + '\'' +
-        '}';
+    return "Disciplina{" + "nota=" + nota + ", disciplina='" + disciplina + '\'' + '}';
   }
 }

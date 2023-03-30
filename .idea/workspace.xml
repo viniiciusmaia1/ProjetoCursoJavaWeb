@@ -8,8 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4855b9cf-de7b-4935-afdd-84f5510e4ab6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/cursojava/classes/Diretor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cursojava/classes/Pessoa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cursojava/classes/Secretario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cursojava/interfaces/PermitirAcesso.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cursojava/classes/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cursojava/classes/Aluno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cursojava/classes/Disciplina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cursojava/classes/Disciplina.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cursojava/executavel/PrimeiraClasseJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cursojava/executavel/PrimeiraClasseJava.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +72,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "google-java-format.settings",
+    "settings.editor.selected.configurable": "preferences.sourceCode",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -100,7 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1679661757513</updated>
       <workItem from="1680007546896" duration="719000" />
-      <workItem from="1680008632680" duration="11038000" />
+      <workItem from="1680008632680" duration="12181000" />
+      <workItem from="1680093679968" duration="5508000" />
     </task>
     <servers />
   </component>
